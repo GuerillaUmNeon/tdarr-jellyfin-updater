@@ -1,0 +1,10 @@
+services:
+  services:
+    jellyfin-tdarr-updater:
+      build: .
+      container_name: jellyfin-tdarr-updater
+      restart: unless-stopped
+      environment:
+        TZ: Europe/Amsterdam
+      volumes:
+        - ./data:/app/data
